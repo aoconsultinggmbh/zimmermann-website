@@ -95,14 +95,14 @@ strong{font-weight:600}
 .nur-sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
 /* Knöpfe wie auf der Hauptwebseite: eckig, dunkel, mit » */
-.knopf{display:inline-flex;align-items:center;gap:.5em;background:var(--slate);color:#fff;text-decoration:none;font-weight:500;font-size:1rem;line-height:1.7;padding:.3em 1em;border:2px solid var(--slate);border-radius:var(--radius);cursor:pointer;font-family:inherit;white-space:nowrap;min-height:44px;transition:background .2s,color .2s,transform .2s}
+.knopf{display:inline-flex;align-items:center;gap:.5em;background:var(--slate);color:#fff;text-decoration:none;font-weight:600;font-size:1rem;line-height:1.7;padding:.3em 1em;border:2px solid var(--slate);border-radius:var(--radius);cursor:pointer;font-family:inherit;white-space:nowrap;min-height:44px;transition:background .2s,color .2s,transform .2s}
 .knopf::after{content:"»";font-size:.9em;transition:transform .2s}
 .knopf:hover,.knopf:focus-visible{background:#fff;color:var(--slate);border-color:var(--slate)}
 .knopf:hover::after{transform:translateX(3px)}
 .knopf--hell{background:#fff;color:var(--slate);border-color:#fff}
 .knopf--hell:hover,.knopf--hell:focus-visible{background:var(--slate);color:#fff;border-color:var(--slate)}
-.knopf--glas{background:rgba(42,51,63,.75);border-color:transparent;color:#fff}
-.knopf--glas:hover,.knopf--glas:focus-visible{background:#fff;color:var(--slate)}
+.knopf--glas{background:var(--slate);border-color:var(--slate);color:#fff}
+.knopf--glas:hover,.knopf--glas:focus-visible{background:#fff;color:var(--slate);border-color:#fff}
 .knopf--umriss{background:transparent;color:var(--slate)}
 .knopf--umriss:hover,.knopf--umriss:focus-visible{background:var(--slate);color:#fff}
 .knopf--ohne::after{content:none}
@@ -379,6 +379,7 @@ mark.offen{background:#FFF1A8;color:#5a4600;padding:0 4px}
   .hero .hero-bild,.hero picture{position:static;height:auto}
   .hero .hero-bild img{aspect-ratio:4/3;height:auto;object-position:50% 30%}
   .hero::after{content:none}
+  .hero .knopf--glas{border-color:#fff}
   .hero .logo{display:none}
   .hero .inhalt{padding-top:34px}
   .hero h1{font-size:clamp(1.75rem,7vw,2.4rem)}
