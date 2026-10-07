@@ -331,6 +331,8 @@ strong{font-weight:600}
 .karte-platz .hinweis p{font-size:.9rem;color:var(--slate-3)}
 .karte-platz iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 @media (max-width:860px){.kontakt-raster{grid-template-columns:1fr}}
+.karte-platz--breit{min-height:420px;margin-top:40px}
+@media (max-width:900px){.karte-platz--breit{min-height:300px;margin-top:32px}}
 
 /* Fußzeile wie die Hauptwebseite */
 body>footer{background:var(--slate);color:#fff;padding:60px 0 0;margin-top:0}
@@ -816,13 +818,6 @@ window.AO_EINWILLIGUNG = {
         <div class="bild bild--frei">
           <picture><source srcset="img/zahnarztpraxis-edenkoben-wartezimmer.webp" type="image/webp"><img src="img/zahnarztpraxis-edenkoben-wartezimmer.jpg" alt="Mitarbeiterin begrüßt eine Patientin an der Tür zum Wartezimmer" width="1800" height="1200" loading="lazy" decoding="async"></picture>
         </div>
-        <div class="karte-platz" id="karte" data-einbettung="medien" style="min-height:300px;margin-top:24px">
-          <div class="hinweis">
-            <h3 style="font-size:1.125rem">Anfahrt mit Google Maps</h3>
-            <p>Mit dem Klick wird die Karte von Google geladen. Dabei wird Ihre IP-Adresse an Google übertragen. Mehr dazu in der <a href="#/datenschutz">Datenschutzerklärung</a>.</p>
-            <button class="knopf knopf--ohne" type="button" data-karte-laden>Karte laden</button>
-          </div>
-        </div>
       </div>
       <form class="formular" id="kontaktformular" novalidate aria-labelledby="form-titel" style="margin-top:0">
         <h2 id="form-titel">Kontaktformular</h2>
@@ -838,6 +833,15 @@ window.AO_EINWILLIGUNG = {
         <button class="knopf" type="submit">Absenden</button>
         <div class="danke" id="danke" role="status"><strong>Vielen Dank für Ihre Nachricht!</strong><br>Ihr E-Mail-Programm hat sich mit allen Angaben geöffnet. Bitte dort absenden, wir melden uns schnellstmöglich. Falls sich kein Fenster geöffnet hat, schreiben Sie uns direkt an <a href="mailto:info@zahnaerzte-edenkoben.de">info@zahnaerzte-edenkoben.de</a>.</div>
       </form>
+    </div>
+    <div class="inhalt">
+      <div class="karte-platz karte-platz--breit" id="karte" data-einbettung="medien">
+        <div class="hinweis">
+          <h3 style="font-size:1.125rem">Anfahrt mit Google Maps</h3>
+          <p>Mit dem Klick wird die Karte von Google geladen. Dabei wird Ihre IP-Adresse an Google übertragen. Mehr dazu in der <a href="#/datenschutz">Datenschutzerklärung</a>.</p>
+          <button class="knopf knopf--ohne" type="button" data-karte-laden>Karte laden</button>
+        </div>
+      </div>
     </div>
   </section>
 
